@@ -1,6 +1,5 @@
-package edu.jsu.mcis.cs310;
-import org.junit.*;
 
+import org.junit.*;
 import static org.junit.Assert.*;
 
 public class ExampleTest {
@@ -46,7 +45,15 @@ public class ExampleTest {
     @Test
     public void testReverseMessage3() {
         String actual = main.reverse("Hickory Dickory Dock");
-        assertEquals(expectedReverse3, actual);
+        assertEquals(expectedReverse3, actual);  
     }
     
+    @Test
+    public void testReverseShortString() {
+        String input = "abc";
+        String expected = "cba";  
+        
+        String actual = main.reverse(input);
+        assertEquals(expected, actual);
+    }
 }
